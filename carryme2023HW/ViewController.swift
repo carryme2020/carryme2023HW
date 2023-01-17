@@ -9,6 +9,10 @@
 import UIKit
 
 private let cellID = "Cell"
+private let tableHeaderView = "Header"
+
+
+
 class ViewController: UIViewController, UITableViewDelegate {
     
     //MARK: - Properties
@@ -65,9 +69,24 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    header
     
-}
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = HeaderView()
+        
+        header.backgroundColor = .yellow
+        
+        return header
+        
+    }
+
+
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 180
+    }
+    
+
+   
 
     
 
