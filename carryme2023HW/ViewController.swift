@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Helpers
     
-    func configureUI(){
+    func configureUI() {
         view.addSubview(tableView)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -48,20 +48,30 @@ class ViewController: UIViewController, UITableViewDelegate {
     
 }
 extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyPageCell
-        return cell
-    }
     
-}
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
-
-    
-
-
-extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyPageCell
+        
+        cell.backgroundColor = .red
+        
+        return cell
+        
+    }
     
 }
+
+extension ViewController: UITableViewDelegate {
+    header
+    
+}
+
+    
+
+
+
+    
+
