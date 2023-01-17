@@ -40,6 +40,15 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="토탈레이팅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks0-Wd-4oI">
+                                <rect key="frame" x="121" y="370" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2cm-AJ-G79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="케리목록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-0L-fWn">
                                 <rect key="frame" x="167" y="441" width="59" height="30"/>
                                 <constraints>
@@ -49,6 +58,16 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H93-qO-TQd">
+                                <rect key="frame" x="16" y="479" width="335" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDG-GV-wkU">
+                                <rect key="frame" x="38" y="490" width="68" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="캐리상품 게임명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGu-QE-j5Q">
                                 <rect key="frame" x="110" y="490" width="225" height="17"/>
                                 <constraints>
@@ -56,6 +75,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="캐리상품 설명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-Ua-YnI">
+                                <rect key="frame" x="110" y="507" width="225" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G1f-9p-i82"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="레벨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-E0-aml">
@@ -85,25 +113,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="캐리상품 설명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-Ua-YnI">
-                                <rect key="frame" x="110" y="507" width="225" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="레벨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79P-Rp-fK6">
+                                <rect key="frame" x="107" y="657" width="65" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="G1f-9p-i82"/>
+                                    <constraint firstAttribute="height" constant="30" id="Wqf-yc-FEJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDG-GV-wkU">
-                                <rect key="frame" x="38" y="490" width="68" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="레이팅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZJ-Ul-Yt3">
+                                <rect key="frame" x="187" y="657" width="65" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yuZ-UI-f1S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="가격" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dan-WH-QWx">
+                                <rect key="frame" x="267" y="657" width="65" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ULv-oP-Hgk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dep-ea-3Cj">
+                                <rect key="frame" x="42" y="657" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="토탈레이팅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks0-Wd-4oI">
-                                <rect key="frame" x="121" y="370" width="150" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="캐리상품 설명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-51-2Uf">
+                                <rect key="frame" x="107" y="680" width="225" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="2cm-AJ-G79"/>
+                                    <constraint firstAttribute="height" constant="30" id="bjZ-WY-mwi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="추천유저목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVF-4F-fhH">
+                                <rect key="frame" x="152" y="604" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -126,6 +179,23 @@
                             <constraint firstItem="ks0-Wd-4oI" firstAttribute="top" secondItem="vBC-bc-dm3" secondAttribute="bottom" constant="25" id="zeH-4d-Hh4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="carryGameFee" destination="wAz-KG-31c" id="P58-rd-PON"/>
+                        <outlet property="carryGameImage" destination="BDG-GV-wkU" id="ykh-8r-X4A"/>
+                        <outlet property="carryGameLevel" destination="BE4-E0-aml" id="chb-kJ-BOM"/>
+                        <outlet property="carryGameName" destination="NGu-QE-j5Q" id="pyI-9q-jaB"/>
+                        <outlet property="carryGameRating" destination="v48-xL-XaM" id="Dy6-wk-y4B"/>
+                        <outlet property="carryGameTiltle" destination="cyv-Ua-YnI" id="Vad-NA-pVh"/>
+                        <outlet property="otherUserCarryGameFee" destination="Dan-WH-QWx" id="asl-zX-4zW"/>
+                        <outlet property="otherUserCarryGameLevel" destination="79P-Rp-fK6" id="v6z-2C-Ida"/>
+                        <outlet property="otherUserCarryGameRating" destination="qZJ-Ul-Yt3" id="EDb-fb-bOt"/>
+                        <outlet property="otherUserCarryGameTitle" destination="f7G-51-2Uf" id="Kpy-9s-POr"/>
+                        <outlet property="otherUserLevel" destination="79P-Rp-fK6" id="TUq-mt-e64"/>
+                        <outlet property="otherUserProfileImage" destination="dep-ea-3Cj" id="8pZ-9L-515"/>
+                        <outlet property="userId" destination="s2D-x2-NGI" id="eSB-Rp-8n4"/>
+                        <outlet property="userProfileImage" destination="Dgq-Y5-kFP" id="YTG-yS-aL9"/>
+                        <outlet property="userTotalRatings" destination="vBC-bc-dm3" id="lUo-7i-w53"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
