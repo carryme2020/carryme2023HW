@@ -7,8 +7,23 @@
 
 import UIKit
 
+struct userInfo {
+    let userProfileImage: UIImage
+    let userId: String
+    let userTotalRatings: Int
+    let gameInfo: gameInfo
+}
+
+struct gameInfo {
+    let carryGameImage: UIImage
+    let carryGameName: String
+    let carryGameTiltle: String
+    let carryGameLevel: String
+    let carryGameRating: Int
+    let carryGameFee: Int
+}
+
 class ViewController: UIViewController {
-    
     
  //유저상세
     @IBOutlet weak var userProfileImage: UIImageView!
