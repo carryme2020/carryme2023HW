@@ -5,84 +5,63 @@
 //  Created by Kyunghyun Lee on 2023/01/17.
 //
 
+
 import UIKit
 
-struct UserInfo {
-    let userProfileImage: UIImage
-    let userId: String
-    let userTotalRatings: Int
-    let gameInfo: GameInfo
-}
-
-struct GameInfo {
-    let carryGameImage: UIImage
-    let carryGameName: String
-    let carryGameTiltle: String
-    let carryGameLevel: String
-    let carryGameRating: Int
-    let carryGameFee: Int
-}
-
-class ViewController: UIViewController {
+private let cellID = "Cell"
+class ViewController: UIViewController, UITableViewDelegate {
     
-    //유저상세
-    @IBOutlet weak var userProfileImage: UIImageView!
+    //MARK: - Properties
     
-    @IBOutlet weak var userId: UILabel!
-    
-    @IBOutlet weak var userTotalRatings: UILabel!
-    
-   // var userInfo: UserInfo
-   // UserInfo(userProfileImage: //UIImageView!(named:roroWow), //userId: "roro", userTotalRatings: //1234)
-    
-
+    let tableView = UITableView()
     
     
-    
-    //캐리목록. 유저가 등록한 캐리상품 리스트
-    //캐리상품에서 보여주는 정보들은 아래와 같음.
-    
-    //캐리게임 사진
-    @IBOutlet weak var carryGameImage: UIImageView!
-    //캐리게임 이름
-    @IBOutlet weak var carryGameName: UILabel!
-    //캐리게임 제목
-    @IBOutlet weak var carryGameTiltle: UILabel!
-    //본 캐리게임 후기 개수에 의한 등급(1등급: 50개 이하,2등급: 51-100개, 3등급:101-200개)
-    @IBOutlet weak var carryGameLevel: UILabel!
-    //본 캐리게임 후기 개수
-    @IBOutlet weak var carryGameRating: UILabel!
-    //본 캐리상품 이용 수수료
-    @IBOutlet weak var carryGameFee: UILabel!
-    
-    //추천유저목록.본 유저 외 동일게임 캐리상품을 등록한 유저 리스트.
-    //추천유저목록에서 보여주는 정보들은 아래와 같음.
-    
-    //다른 유저프사
-    @IBOutlet weak var otherUserProfileImage: UIImageView!
-    
-    //다른 유저 캐리게임 후기 개수에 의한 등급(1등급: 50개 이하,2등급: 51-100개, 3등급:101-200개)
-    @IBOutlet weak var otherUserCarryGameLevel: UILabel!
-    
-    //다른 유저 캐리게임 후기 개수
-    @IBOutlet weak var otherUserCarryGameRating: UILabel!
-    
-    //다른 유저 캐리상품 이용 수수료
-    @IBOutlet weak var otherUserCarryGameFee: UILabel!
-    
-    //다른 유저 캐리게임 제목
-    @IBOutlet weak var otherUserCarryGameTitle: UILabel!
-    
-    
-
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-      
+        configureUI()
+        
     }
-
-
+    
+    
+    // MARK: - Helpers
+    
+    func configureUI(){
+        view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(MyPageCell.self, forCellReuseIdentifier: cellID)
+        
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+    }
+    
 }
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyPageCell
+        return cell
+    }
+    
+}
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
 
+    
+
+
+extension ViewController: UITableViewDelegate {
+    
+}
