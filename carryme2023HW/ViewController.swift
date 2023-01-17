@@ -7,14 +7,14 @@
 
 import UIKit
 
-struct userInfo {
+struct UserInfo {
     let userProfileImage: UIImage
     let userId: String
     let userTotalRatings: Int
-    let gameInfo: gameInfo
+    let gameInfo: GameInfo
 }
 
-struct gameInfo {
+struct GameInfo {
     let carryGameImage: UIImage
     let carryGameName: String
     let carryGameTiltle: String
@@ -25,14 +25,21 @@ struct gameInfo {
 
 class ViewController: UIViewController {
     
- //유저상세
+    //유저상세
     @IBOutlet weak var userProfileImage: UIImageView!
     
     @IBOutlet weak var userId: UILabel!
     
     @IBOutlet weak var userTotalRatings: UILabel!
     
- //캐리목록. 유저가 등록한 캐리상품 리스트
+   // var userInfo: UserInfo
+   // UserInfo(userProfileImage: //UIImageView!(named:roroWow), //userId: "roro", userTotalRatings: //1234)
+    
+
+    
+    
+    
+    //캐리목록. 유저가 등록한 캐리상품 리스트
     //캐리상품에서 보여주는 정보들은 아래와 같음.
     
     //캐리게임 사진
@@ -48,7 +55,7 @@ class ViewController: UIViewController {
     //본 캐리상품 이용 수수료
     @IBOutlet weak var carryGameFee: UILabel!
     
- //추천유저목록.본 유저 외 동일게임 캐리상품을 등록한 유저 리스트.
+    //추천유저목록.본 유저 외 동일게임 캐리상품을 등록한 유저 리스트.
     //추천유저목록에서 보여주는 정보들은 아래와 같음.
     
     //다른 유저프사
@@ -66,6 +73,8 @@ class ViewController: UIViewController {
     //다른 유저 캐리게임 제목
     @IBOutlet weak var otherUserCarryGameTitle: UILabel!
     
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
