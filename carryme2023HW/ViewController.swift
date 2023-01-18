@@ -16,11 +16,9 @@ class ViewController: UIViewController {
     
     //MARK: - Properties
     
-    @IBOutlet weak var userProfile: UILabel!
-    
+    let userLabel = UILabel()
     
     let tableView = UITableView(frame: .zero, style: .grouped) //header scroll-down drag together with tableView
- //   let tableHeaderView = UIView()
     
     let myPageMenu = [""]
     
@@ -29,9 +27,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+    
         configureUI()
-        
+        style()
+        layout()
     }
     
     
@@ -65,7 +64,7 @@ class ViewController: UIViewController {
         ])
         
     }
-    
+
 }
 
 
@@ -73,7 +72,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,6 +87,34 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
+    
+ 
+
+    private func style() {
+        // [view]
+        view.backgroundColor = .systemBackground
+        
+        // [Label]
+        userLabel.translatesAutoresizingMaskIntoConstraints = false
+        userLabel.numberOfLines = 1
+        userLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        userLabel.textAlignment = .center
+        userLabel.text = "유저상세"
+        
+        view.addSubview(userLabel)
+        
+    }
+    
+    private func layout() {
+
+        // [userLabel] 기본 상부 배치
+        NSLayoutConstraint.activate([
+            userLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            userLabel.topAnchor.constraint(equalTo: view.topAnchor)
+         
+        ])
+    }
+    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = HeaderView()

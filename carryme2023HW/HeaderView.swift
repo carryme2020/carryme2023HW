@@ -12,8 +12,6 @@ class HeaderView: UIView {
     
     // MARK: - Property
     
-    @IBOutlet weak var userProfile: UILabel!
- 
     
     let userProfileImage: UIImageView = {
         let iv = UIImageView()
