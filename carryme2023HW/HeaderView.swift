@@ -12,10 +12,16 @@ class HeaderView: UIView {
     
     // MARK: - Property
     
+    @IBOutlet weak var userProfile: UILabel!
+ 
+    
     let userProfileImage: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(systemName: "person.fill")
         iv.contentMode = .scaleToFill
+        iv.backgroundColor = .lightGray
+        iv.layer.cornerRadius = 120 / 2
+        iv.clipsToBounds = true 
         return iv
     }()
     
