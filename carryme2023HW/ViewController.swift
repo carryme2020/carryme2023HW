@@ -13,12 +13,12 @@ private let tableHeaderView = "Header"
 
 
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController {
     
     //MARK: - Properties
     
-    let tableView = UITableView()
-    
+    let tableView = UITableView(frame: .zero, style: .grouped) //header scroll-down drag together with tableView
+ //   let tableHeaderView = UIView()
     
     // MARK: - Lifecycle
     
@@ -36,12 +36,15 @@ class ViewController: UIViewController, UITableViewDelegate {
     func configureUI() {
         view.addSubview(tableView)
         
+        tableView.backgroundColor = .yellow
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(MyPageCell.self, forCellReuseIdentifier: cellID)
+        //
         
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -51,6 +54,9 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
     
 }
+
+
+
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,19 +84,15 @@ extension ViewController: UITableViewDelegate {
         return header
         
     }
-
-
+    
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 180
     }
     
-
-   
-
     
-
-
-
     
-
+    
+    
+}
