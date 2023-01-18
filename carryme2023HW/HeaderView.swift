@@ -12,6 +12,16 @@ class HeaderView: UIView {
     
     // MARK: - Property
     
+    var userLabel: UILabel {
+        let ul = UILabel()
+        ul.translatesAutoresizingMaskIntoConstraints = false
+        ul.numberOfLines = 1
+        ul.font = UIFont.preferredFont(forTextStyle: .title3)
+        ul.textAlignment = .center
+        ul.text = "유저상세"
+        return ul
+    }
+    
     
     let userProfileImage: UIImageView = {
         let iv = UIImageView()
@@ -29,6 +39,7 @@ class HeaderView: UIView {
         super.init(frame: frame)
         
         configureUI()
+        layout()
         
     }
     required init?(coder: NSCoder) {
@@ -46,6 +57,27 @@ class HeaderView: UIView {
         userProfileImage.widthAnchor.constraint(equalToConstant: 120).isActive = true
         userProfileImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
+        
+        addSubview(userLabel)
+        userLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        userLabel.numberOfLines = 1
+        userLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        userLabel.textAlignment = .center
+        userLabel.text = "유저상세"
+        
+    }
+        
+    private func layout() {
+
+            // [userLabel] 기본 상부 배치
+        //NSLayoutConstraint.activate([
+       // userLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+       // userLabel.topAnchor.constraint(equalTo: topAnchor)
+             
+         //   ])
+        }
+        
+        
     }
 
-}
